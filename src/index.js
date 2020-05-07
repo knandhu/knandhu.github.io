@@ -239,47 +239,47 @@ function addPathTree() {
 
 //ATV Model
 
-function atv() {
-  let playerMesh;
+// function atv() {
+//   let playerMesh;
   
-  var loader = new FBXLoader();
-  var TLoader = new THREE.TextureLoader();
-  var texture = TLoader.load("./models/car/source/ffc604b9.jpg");
+//   var loader = new FBXLoader();
+//   var TLoader = new THREE.TextureLoader();
+//   var texture = TLoader.load("./models/car/source/ffc604b9.jpg");
 
-  playerMesh = loader.load(
-    "./models/car/source/ATV.FBX",
-    function (object) {
-      console.log('in atv');
-      playerMesh = object.children[0];
-      console.log("in callback", object);
-      playerMesh.receiveShadow = true;
-      playerMesh.castShadow = true;
-      playerMesh.geometry.computeBoundingSphere();
-      playerMesh.material.map = texture;
-      playerMesh.material.depthTest = false;
-      playerMesh.scale.multiplyScalar(0.09);
-      // heroSphere.scale.multiplyScalar(1);
-      // currentLane = middleLane;
-      // playerMesh.position.x = currentLane;
-      // playerMesh.position.set(currentLane, 0, 0);
-      heroSphere.rotation.set(1.708, 3.14159, 100);
-      // heroSphere.rotation.x -= heroRollingSpeed;
-      scene.add(playerMesh);
-    },
-    undefined,
-    function (e) {
-      console.error("An error", e);
-    }
+//   playerMesh = loader.load(
+//     "./models/car/source/ATV.FBX",
+//     function (object) {
+//       console.log('in atv');
+//       playerMesh = object.children[0];
+//       console.log("in callback", object);
+//       playerMesh.receiveShadow = true;
+//       playerMesh.castShadow = true;
+//       playerMesh.geometry.computeBoundingSphere();
+//       playerMesh.material.map = texture;
+//       playerMesh.material.depthTest = false;
+//       playerMesh.scale.multiplyScalar(0.09);
+//       // heroSphere.scale.multiplyScalar(1);
+//       // currentLane = middleLane;
+//       // playerMesh.position.x = currentLane;
+//       // playerMesh.position.set(currentLane, 0, 0);
+//       heroSphere.rotation.set(1.708, 3.14159, 100);
+//       // heroSphere.rotation.x -= heroRollingSpeed;
+//       scene.add(playerMesh);
+//     },
+//     undefined,
+//     function (e) {
+//       console.error("An error", e);
+//     }
 
 
-  );
-  currentLane = middleLane;
-  // playerMesh.position.set(currentLane, 0, 0);
-  // playerMesh.position.x = currentLane;
-  camera.position.z = 19;
-  camera.position.y = 2.5;
-  camera.position.x = 1;
-}
+//   );
+//   currentLane = middleLane;
+//   // playerMesh.position.set(currentLane, 0, 0);
+//   // playerMesh.position.x = currentLane;
+//   camera.position.z = 19;
+//   camera.position.y = 2.5;
+//   camera.position.x = 1;
+// }
 //Rock
 function rock() {
 
