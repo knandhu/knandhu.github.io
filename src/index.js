@@ -144,7 +144,7 @@ createTreesPool();
 
 var sphericalHelper = new THREE.Spherical();
 // document.addEventListener('DOMContentLoaded', () => {
-//   console.log('loaded');
+
 addWorld();
 addExplosion();
 // update();
